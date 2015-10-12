@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="testapp" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular testapp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+	<div ng-controller="FirstCtrl as fc">
+		<label for="greeting">Type a bootstrap class here:</label>
+		<input type="text" name="greeting" ng-model="fc.greeting">
+
+		<div ng-class="fc.greeting">
+			
+			{{ fc.greeting }} {{ "world" }}
+
+		</div>
+
+	</div>
+
+	<div ng-controller="RoomCtrl as room">
+		<div class="btn btn-default" ng-click="room.OpenDoor()">
+			{{ room.buttonTitle }}
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
